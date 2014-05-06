@@ -5,9 +5,10 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
+angular.module('wanderr', ['ionic', 'wanderr.controllers', 'wanderr.services']);
+angular.module('wanderr.controllers', []);
 
-.run(function($ionicPlatform) {
+angular.module('wanderr').run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     if(window.StatusBar) {
       // org.apache.cordova.statusbar required
@@ -23,57 +24,78 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   // Set up the various states which the app can be in.
   // Each state's controller can be found in controllers.js
   $stateProvider
-
-    // setup an abstract state for the tabs directive
-    .state('tab', {
-      url: "/tab",
+    .state('tabs', {
+      url: '/tab',
       abstract: true,
       templateUrl: "templates/tabs.html"
     })
-
-    // Each tab has its own nav history stack:
-
-    .state('tab.dash', {
-      url: '/dash',
+    .state('tabs.lists', {
+      url: "/lists",
       views: {
-        'tab-dash': {
-          templateUrl: 'templates/tab-dash.html',
-          controller: 'DashCtrl'
+        'lists-tab' : {
+          controller: "ListsCtrl",
+          templateUrl: "templates/lists.html"
+        }
+      }
+    })
+    .state('tabs.search-map', {
+      url: "/search-map",
+      views: {
+        'search-map': {
+          templateUrl: "templates/search-map.html",
+					controller: "SearchMapCtrl"
+        }
+      }
+    })
+    .state('tabs.search-list', {
+      url: "/search-list",
+      views: {
+        'search-map': {
+          templateUrl: "templates/search-list.html",
+          controller: 'SearchListCtrl'
+        }
+      }
+    })
+    .state('tabs.item-info', {
+      url: "/item-info/:itemId",
+      views: {
+        'search-map': {
+          templateUrl: "templates/item-info.html",
+          controller: 'ItemInfoCtrl'
+        }
+      }
+    })
+    .state('tabs.suggestions', {
+      url: "/suggestions",
+      views: {
+        'suggestions-tab': {
+          templateUrl: "templates/suggestions.html",
+					controller: "SuggestionsCtrl"
+        }
+      }
+    })
+    .state('tabs.make-suggestion',{
+      url: "/suggestions/make/:foursquare_id",
+      views:{
+          'suggestions-tab':{
+            templateUrl: "templates/make_suggestion.html",
+            controller: 'MakeSuggestionCtrl'
+          }
+        }
+    })
+    .state('tabs.myself', {
+      url: "/myself",
+      views: {
+        'myself-tab': {
+          templateUrl: "templates/myself.html",
+					controller: "MyselfCtrl"
         }
       }
     })
 
-    .state('tab.friends', {
-      url: '/friends',
-      views: {
-        'tab-friends': {
-          templateUrl: 'templates/tab-friends.html',
-          controller: 'FriendsCtrl'
-        }
-      }
-    })
-    .state('tab.friend-detail', {
-      url: '/friend/:friendId',
-      views: {
-        'tab-friends': {
-          templateUrl: 'templates/friend-detail.html',
-          controller: 'FriendDetailCtrl'
-        }
-      }
-    })
-
-    .state('tab.account', {
-      url: '/account',
-      views: {
-        'tab-account': {
-          templateUrl: 'templates/tab-account.html',
-          controller: 'AccountCtrl'
-        }
-      }
-    })
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/dash');
+  $urlRouterProvider.otherwise('/tab/lists');
 
 });
 
