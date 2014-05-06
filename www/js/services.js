@@ -1,4 +1,4 @@
-angular.module('wanderr.services', [])
+angular.module('wanderr.services')
 
 /**
  * A simple example service that returns some data.
