@@ -6,3 +6,12 @@
 2014-05-05 19:53:22.316 HelloCordova[19424:70b] Resetting plugins due to page load.
 2014-05-05 19:53:22.664 HelloCordova[19424:70b] Finished load of: file:///Users/eytananjel/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/DD979343-2B4A-43FF-AC78-9371E1E0D9C5/HelloCordova.app/www/index.html#/tab/dash
 Terminating in response to SpringBoard's termination.
+2014-05-28 01:36:45.173 wanderr[46052:70b] Multi-tasking -> Device: YES, App: YES
+2014-05-28 01:36:45.203 wanderr[46052:70b] Unlimited access to network resources
+2014-05-28 01:36:45.208 wanderr[46052:70b] Fix applied for database locations?: YES
+2014-05-28 01:36:45.363 wanderr[46052:70b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-05-28 01:36:45.363 wanderr[46052:70b] [CDVTimer][statusbar] 0.488997ms
+2014-05-28 01:36:45.364 wanderr[46052:70b] [CDVTimer][TotalPluginStartup] 0.931025ms
+2014-05-28 01:36:45.531 wanderr[46052:70b] Resetting plugins due to page load.
+2014-05-28 01:36:45.981 wanderr[46052:70b] Finished load of: file:///Users/eytananjel/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/641040A3-9FCD-4C18-937E-EEB34E80EA1A/wanderr.app/www/index.html#/sign-in
+Terminating in response to SpringBoard's termination.

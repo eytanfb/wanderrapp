@@ -1,19 +1,41 @@
-angular.module('wanderr', ['ionic', 'wanderr.controllers', 'wanderr.services']);
+angular.module('wanderr', ['ionic', 'openfb', 'wanderr.controllers']);
 angular.module('wanderr.controllers', []);
-angular.module('wanderr.services', []);
 
-angular.module('wanderr').run(function($ionicPlatform) {
+angular.module('wanderr').run(function($ionicPlatform, $rootScope, $state, $window, OpenFB) {
+
+  console.log("app is running");
+  OpenFB.init("747131175326655");
+
   $ionicPlatform.ready(function() {
     if(window.StatusBar) {
-      // org.apache.cordova.statusbar required
+      console.log("statusbar");
       StatusBar.styleDefault();
     }
+  });
+
+  $rootScope.$on('$stateChangeStart', function(event, toState){
+    console.log("toState: " + toState.name);
+    if (toState.name !== "signin" && toState.name !== "tabs.logout" && !$window.sessionStorage['fbtoken']){
+      $state.go("signin");
+      console.log("getting to signin");
+      event.preventDefault();
+    }
+  });
+
+  $rootScope.$on('OAuthException', function(){
+    console.log("OAuthException");
+    $state.go('signin');
   });
 })
 
 .config(function($stateProvider, $urlRouterProvider) {
 
   $stateProvider
+    .state('signin', {
+      url: '/sign-in',
+      controller: 'SignInCtrl',
+      templateUrl: "templates/sign-in.html"
+    })
     .state('tabs', {
       url: '/tab',
       abstract: true,
@@ -27,62 +49,7 @@ angular.module('wanderr').run(function($ionicPlatform) {
           templateUrl: "templates/lists.html"
         }
       }
-    })
-    .state('tabs.search-map', {
-      url: "/search-map",
-      views: {
-        'search-map-tab': {
-          templateUrl: "templates/search-map.html",
-					controller: "SearchMapCtrl"
-        }
-      }
-    })
-    .state('tabs.search-list', {
-      url: "/search-list",
-      views: {
-        'search-map': {
-          templateUrl: "templates/search-list.html",
-          controller: 'SearchListCtrl'
-        }
-      }
-    })
-    .state('tabs.item-info', {
-      url: "/item-info/:itemId",
-      views: {
-        'search-map': {
-          templateUrl: "templates/item-info.html",
-          controller: 'ItemInfoCtrl'
-        }
-      }
-    })
-    .state('tabs.suggestions', {
-      url: "/suggestions",
-      views: {
-        'suggestions-tab': {
-          templateUrl: "templates/suggestions.html",
-					controller: "SuggestionsCtrl"
-        }
-      }
-    })
-    .state('tabs.make-suggestion',{
-      url: "/suggestions/make/:foursquare_id",
-      views:{
-          'suggestions-tab':{
-            templateUrl: "templates/make_suggestion.html",
-            controller: 'MakeSuggestionCtrl'
-          }
-        }
-    })
-    .state('tabs.myself', {
-      url: "/myself",
-      views: {
-        'myself-tab': {
-          templateUrl: "templates/myself.html",
-					controller: "MyselfCtrl"
-        }
-      }
-    })
-
+    });
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/tab/lists');
