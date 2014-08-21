@@ -1,10 +1,8 @@
-angular.module('wanderr', ['ionic', 'openfb', 'wanderr.controllers']);
+angular.module('wanderr', ['ionic', 'firebase', 'wanderr.controllers', 'wanderr.services']);
 angular.module('wanderr.controllers', []);
+angular.module('wanderr.services', []);
 
-angular.module('wanderr').run(function($ionicPlatform, $rootScope, $state, $window, OpenFB) {
-
-  console.log("app is running");
-  OpenFB.init("747131175326655");
+angular.module('wanderr').run(function($ionicPlatform, $rootScope, $state, $window) {
 
   $ionicPlatform.ready(function() {
     if(window.StatusBar) {
@@ -14,7 +12,6 @@ angular.module('wanderr').run(function($ionicPlatform, $rootScope, $state, $wind
   });
 
   $rootScope.$on('$stateChangeStart', function(event, toState){
-    console.log("toState: " + toState.name);
     if (toState.name !== "signin" && toState.name !== "tabs.logout" && !$window.sessionStorage['fbtoken']){
       $state.go("signin");
       console.log("getting to signin");
@@ -23,7 +20,6 @@ angular.module('wanderr').run(function($ionicPlatform, $rootScope, $state, $wind
   });
 
   $rootScope.$on('OAuthException', function(){
-    console.log("OAuthException");
     $state.go('signin');
   });
 })
@@ -52,7 +48,7 @@ angular.module('wanderr').run(function($ionicPlatform, $rootScope, $state, $wind
     });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/lists');
+  $urlRouterProvider.otherwise('/sign-in');
 
 });
 

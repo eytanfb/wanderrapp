@@ -1,6 +1,6 @@
 {
   "name": "wanderr",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "Wanderr is a social, geolocation based reminder app",
   "dependencies": {
     "gulp": "^3.5.6",

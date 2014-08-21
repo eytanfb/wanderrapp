@@ -1,5 +1,17 @@
-<ion-view title="Lists">
+<ion-view title="{{ user }}'s Lists">
   <ion-content class="has-header">
-    <h3>Lists</h3>
+    <article id="lists">
+      <section id="public-list">
+        <h3>Public List</h3>
+        <ol ng-repeat="item in publicList">
+          <li>{{ item }}</li>
+        </ol>
+      </section>
+      <section id="private-list">
+        <h3>Private List</h3>
+        <ol ng-repeat="item in privateList">
+          <li>{{ item }}</li>
+        </ol>
+    </article>
   </ion-content>
 </ion-view>

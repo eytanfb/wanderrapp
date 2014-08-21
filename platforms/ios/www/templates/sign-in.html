@@ -1,8 +1,11 @@
-<ion-view title="Sign-In">
-  <ion-content class="has-header">
-    <article id="login-with-facebook">
-      <h3>Welcome to wanderr</h3>
-      <button class="button button-clock button-light" ng-click="facebookLogin()">Login with Facebook</button>
+<ion-view title="Sign-In" hide-nav-bar="true">
+  <ion-content>
+    <article id="login-with-facebook" ng-controller="SignInCtrl">
+      <h3>Welcome to Wanderr</h3>
+      <button class="button button-clock button-positive" ng-click="login('facebook')">
+        <i class="ion ion-social-facebook"></i>
+        Login with Facebook
+      </button>
     </article>
   </ion-content>
 </ion-view>

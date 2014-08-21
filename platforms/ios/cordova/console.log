@@ -1,17 +1,218 @@
-2014-05-05 19:53:21.965 HelloCordova[19424:70b] Multi-tasking -> Device: YES, App: YES
-2014-05-05 19:53:22.005 HelloCordova[19424:70b] Unlimited access to network resources
-2014-05-05 19:53:22.147 HelloCordova[19424:70b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
-2014-05-05 19:53:22.148 HelloCordova[19424:70b] [CDVTimer][statusbar] 1.013994ms
-2014-05-05 19:53:22.148 HelloCordova[19424:70b] [CDVTimer][TotalPluginStartup] 1.421988ms
-2014-05-05 19:53:22.316 HelloCordova[19424:70b] Resetting plugins due to page load.
-2014-05-05 19:53:22.664 HelloCordova[19424:70b] Finished load of: file:///Users/eytananjel/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/DD979343-2B4A-43FF-AC78-9371E1E0D9C5/HelloCordova.app/www/index.html#/tab/dash
-Terminating in response to SpringBoard's termination.
-2014-05-28 01:36:45.173 wanderr[46052:70b] Multi-tasking -> Device: YES, App: YES
-2014-05-28 01:36:45.203 wanderr[46052:70b] Unlimited access to network resources
-2014-05-28 01:36:45.208 wanderr[46052:70b] Fix applied for database locations?: YES
-2014-05-28 01:36:45.363 wanderr[46052:70b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
-2014-05-28 01:36:45.363 wanderr[46052:70b] [CDVTimer][statusbar] 0.488997ms
-2014-05-28 01:36:45.364 wanderr[46052:70b] [CDVTimer][TotalPluginStartup] 0.931025ms
-2014-05-28 01:36:45.531 wanderr[46052:70b] Resetting plugins due to page load.
-2014-05-28 01:36:45.981 wanderr[46052:70b] Finished load of: file:///Users/eytananjel/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/641040A3-9FCD-4C18-937E-EEB34E80EA1A/wanderr.app/www/index.html#/sign-in
-Terminating in response to SpringBoard's termination.
+2014-08-20 23:09:45.207 wanderr[10406:70b] Multi-tasking -> Device: YES, App: YES
+2014-08-20 23:09:45.234 wanderr[10406:70b] Unlimited access to network resources
+2014-08-20 23:09:45.239 wanderr[10406:70b] 
+
+Started backup to iCloud! Please be careful.
+Your application might rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines"
+You could find it at the following address https://developer.apple.com/icloud/documentation/data-storage/ .
+
+2014-08-20 23:09:45.574 wanderr[10406:70b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-08-20 23:09:45.574 wanderr[10406:70b] [CDVTimer][statusbar] 0.539005ms
+2014-08-20 23:09:45.575 wanderr[10406:70b] [CDVTimer][TotalPluginStartup] 1.179993ms
+2014-08-20 23:09:45.747 wanderr[10406:70b] Resetting plugins due to page load.
+2014-08-20 23:09:46.355 wanderr[10406:70b] Finished load of: file:///Users/eytananjel/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/8AC1B814-0CAC-4B75-AAA6-FA9815697521/wanderr.app/www/index.html#/sign-in
+2014-08-20 23:09:46.706 wanderr[10406:70b] CDVPlugin class CDVStatusBar (pluginName: StatusBar) does not exist.
+2014-08-20 23:09:46.706 wanderr[10406:70b] ERROR: Plugin 'StatusBar' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2014-08-20 23:09:46.707 wanderr[10406:70b] -[CDVCommandQueue executePending] [Line 158] FAILED pluginJSON = [
+  "INVALID",
+  "StatusBar",
+  "_ready",
+  [
+
+  ]
+]
+2014-08-20 23:09:46.707 wanderr[10406:70b] CDVPlugin class CDVDevice (pluginName: Device) does not exist.
+2014-08-20 23:09:46.707 wanderr[10406:70b] ERROR: Plugin 'Device' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2014-08-20 23:09:46.708 wanderr[10406:70b] -[CDVCommandQueue executePending] [Line 158] FAILED pluginJSON = [
+  "Device1610940408",
+  "Device",
+  "getDeviceInfo",
+  [
+
+  ]
+]
+2014-08-20 23:09:47.410 wanderr[10406:70b] CDVPlugin class CDVInAppBrowser (pluginName: InAppBrowser) does not exist.
+2014-08-20 23:09:47.410 wanderr[10406:70b] ERROR: Plugin 'InAppBrowser' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2014-08-20 23:09:47.410 wanderr[10406:70b] -[CDVCommandQueue executePending] [Line 158] FAILED pluginJSON = [
+  "InAppBrowser1610940409",
+  "InAppBrowser",
+  "open",
+  [
+    "https:\/\/auth.firebase.com\/auth\/facebook?firebase=resplendent-fire-4008&v=1.6.2&transport=internal-redirect-hash",
+    "blank",
+    "location=no"
+  ]
+]
+2014-08-20 23:09:49.829 wanderr[10406:70b] CDVPlugin class CDVInAppBrowser (pluginName: InAppBrowser) does not exist.
+2014-08-20 23:09:49.829 wanderr[10406:70b] ERROR: Plugin 'InAppBrowser' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2014-08-20 23:09:49.829 wanderr[10406:70b] -[CDVCommandQueue executePending] [Line 158] FAILED pluginJSON = [
+  "InAppBrowser1610940410",
+  "InAppBrowser",
+  "open",
+  [
+    "https:\/\/auth.firebase.com\/auth\/facebook?firebase=resplendent-fire-4008&v=1.6.2&transport=internal-redirect-hash",
+    "blank",
+    "location=no"
+  ]
+]
+2014-08-20 23:09:54.556 wanderr[10406:70b] CDVPlugin class CDVInAppBrowser (pluginName: InAppBrowser) does not exist.
+2014-08-20 23:09:54.556 wanderr[10406:70b] ERROR: Plugin 'InAppBrowser' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2014-08-20 23:09:54.556 wanderr[10406:70b] -[CDVCommandQueue executePending] [Line 158] FAILED pluginJSON = [
+  "InAppBrowser1610940411",
+  "InAppBrowser",
+  "open",
+  [
+    "https:\/\/auth.firebase.com\/auth\/facebook?firebase=resplendent-fire-4008&v=1.6.2&transport=internal-redirect-hash",
+    "blank",
+    "location=no"
+  ]
+]
+2014-08-20 23:10:33.564 wanderr[10406:70b] CDVPlugin class CDVInAppBrowser (pluginName: InAppBrowser) does not exist.
+2014-08-20 23:10:33.565 wanderr[10406:70b] ERROR: Plugin 'InAppBrowser' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2014-08-20 23:10:33.565 wanderr[10406:70b] -[CDVCommandQueue executePending] [Line 158] FAILED pluginJSON = [
+  "InAppBrowser1610940412",
+  "InAppBrowser",
+  "open",
+  [
+    "https:\/\/auth.firebase.com\/auth\/facebook?firebase=resplendent-fire-4008&v=1.6.2&transport=internal-redirect-hash",
+    "blank",
+    "location=no"
+  ]
+]
+2014-08-20 23:10:36.375 wanderr[10406:70b] CDVPlugin class CDVInAppBrowser (pluginName: InAppBrowser) does not exist.
+2014-08-20 23:10:36.375 wanderr[10406:70b] ERROR: Plugin 'InAppBrowser' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2014-08-20 23:10:36.376 wanderr[10406:70b] -[CDVCommandQueue executePending] [Line 158] FAILED pluginJSON = [
+  "InAppBrowser1610940413",
+  "InAppBrowser",
+  "open",
+  [
+    "https:\/\/auth.firebase.com\/auth\/facebook?firebase=resplendent-fire-4008&v=1.6.2&transport=internal-redirect-hash",
+    "blank",
+    "location=no"
+  ]
+]
+2014-08-20 23:10:39.913 wanderr[10406:70b] CDVPlugin class CDVInAppBrowser (pluginName: InAppBrowser) does not exist.
+2014-08-20 23:10:39.913 wanderr[10406:70b] ERROR: Plugin 'InAppBrowser' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2014-08-20 23:10:39.914 wanderr[10406:70b] -[CDVCommandQueue executePending] [Line 158] FAILED pluginJSON = [
+  "InAppBrowser1610940414",
+  "InAppBrowser",
+  "open",
+  [
+    "https:\/\/auth.firebase.com\/auth\/facebook?firebase=resplendent-fire-4008&v=1.6.2&transport=internal-redirect-hash",
+    "blank",
+    "location=no"
+  ]
+]
+2014-08-20 23:10:40.337 wanderr[10406:70b] CDVPlugin class CDVInAppBrowser (pluginName: InAppBrowser) does not exist.
+2014-08-20 23:10:40.337 wanderr[10406:70b] ERROR: Plugin 'InAppBrowser' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2014-08-20 23:10:40.337 wanderr[10406:70b] -[CDVCommandQueue executePending] [Line 158] FAILED pluginJSON = [
+  "InAppBrowser1610940415",
+  "InAppBrowser",
+  "open",
+  [
+    "https:\/\/auth.firebase.com\/auth\/facebook?firebase=resplendent-fire-4008&v=1.6.2&transport=internal-redirect-hash",
+    "blank",
+    "location=no"
+  ]
+]
+2014-08-20 23:10:40.520 wanderr[10406:70b] CDVPlugin class CDVInAppBrowser (pluginName: InAppBrowser) does not exist.
+2014-08-20 23:10:40.520 wanderr[10406:70b] ERROR: Plugin 'InAppBrowser' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2014-08-20 23:10:40.521 wanderr[10406:70b] -[CDVCommandQueue executePending] [Line 158] FAILED pluginJSON = [
+  "InAppBrowser1610940416",
+  "InAppBrowser",
+  "open",
+  [
+    "https:\/\/auth.firebase.com\/auth\/facebook?firebase=resplendent-fire-4008&v=1.6.2&transport=internal-redirect-hash",
+    "blank",
+    "location=no"
+  ]
+]
+2014-08-20 23:10:40.723 wanderr[10406:70b] CDVPlugin class CDVInAppBrowser (pluginName: InAppBrowser) does not exist.
+2014-08-20 23:10:40.723 wanderr[10406:70b] ERROR: Plugin 'InAppBrowser' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2014-08-20 23:10:40.723 wanderr[10406:70b] -[CDVCommandQueue executePending] [Line 158] FAILED pluginJSON = [
+  "InAppBrowser1610940417",
+  "InAppBrowser",
+  "open",
+  [
+    "https:\/\/auth.firebase.com\/auth\/facebook?firebase=resplendent-fire-4008&v=1.6.2&transport=internal-redirect-hash",
+    "blank",
+    "location=no"
+  ]
+]
+2014-08-20 23:11:47.414 wanderr[10406:70b] CDVPlugin class CDVInAppBrowser (pluginName: InAppBrowser) does not exist.
+2014-08-20 23:11:47.415 wanderr[10406:70b] ERROR: Plugin 'InAppBrowser' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2014-08-20 23:11:47.415 wanderr[10406:70b] -[CDVCommandQueue executePending] [Line 158] FAILED pluginJSON = [
+  "INVALID",
+  "InAppBrowser",
+  "close",
+  [
+
+  ]
+]
+2014-08-20 23:11:49.833 wanderr[10406:70b] CDVPlugin class CDVInAppBrowser (pluginName: InAppBrowser) does not exist.
+2014-08-20 23:11:49.833 wanderr[10406:70b] ERROR: Plugin 'InAppBrowser' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2014-08-20 23:11:49.833 wanderr[10406:70b] -[CDVCommandQueue executePending] [Line 158] FAILED pluginJSON = [
+  "INVALID",
+  "InAppBrowser",
+  "close",
+  [
+
+  ]
+]
+2014-08-20 23:12:03.267 wanderr[10720:70b] Multi-tasking -> Device: YES, App: YES
+2014-08-20 23:12:03.276 wanderr[10720:70b] Unlimited access to network resources
+2014-08-20 23:12:03.279 wanderr[10720:70b] 
+
+Started backup to iCloud! Please be careful.
+Your application might rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines"
+You could find it at the following address https://developer.apple.com/icloud/documentation/data-storage/ .
+
+2014-08-20 23:12:03.297 wanderr[10720:70b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-08-20 23:12:03.298 wanderr[10720:70b] [CDVTimer][statusbar] 0.500977ms
+2014-08-20 23:12:03.298 wanderr[10720:70b] [CDVTimer][TotalPluginStartup] 0.892997ms
+2014-08-20 23:12:03.434 wanderr[10720:70b] Resetting plugins due to page load.
+2014-08-20 23:12:03.832 wanderr[10720:70b] Finished load of: file:///Users/eytananjel/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/8AC1B814-0CAC-4B75-AAA6-FA9815697521/wanderr.app/www/index.html#/sign-in
+2014-08-20 23:12:03.994 wanderr[10720:70b] CDVPlugin class CDVStatusBar (pluginName: StatusBar) does not exist.
+2014-08-20 23:12:03.995 wanderr[10720:70b] ERROR: Plugin 'StatusBar' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2014-08-20 23:12:03.995 wanderr[10720:70b] -[CDVCommandQueue executePending] [Line 158] FAILED pluginJSON = [
+  "INVALID",
+  "StatusBar",
+  "_ready",
+  [
+
+  ]
+]
+2014-08-20 23:12:03.996 wanderr[10720:70b] CDVPlugin class CDVDevice (pluginName: Device) does not exist.
+2014-08-20 23:12:03.996 wanderr[10720:70b] ERROR: Plugin 'Device' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2014-08-20 23:12:03.996 wanderr[10720:70b] -[CDVCommandQueue executePending] [Line 158] FAILED pluginJSON = [
+  "Device735949497",
+  "Device",
+  "getDeviceInfo",
+  [
+
+  ]
+]
+2014-08-20 23:12:07.786 wanderr[10720:70b] CDVPlugin class CDVInAppBrowser (pluginName: InAppBrowser) does not exist.
+2014-08-20 23:12:07.786 wanderr[10720:70b] ERROR: Plugin 'InAppBrowser' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2014-08-20 23:12:07.786 wanderr[10720:70b] -[CDVCommandQueue executePending] [Line 158] FAILED pluginJSON = [
+  "InAppBrowser735949498",
+  "InAppBrowser",
+  "open",
+  [
+    "https:\/\/auth.firebase.com\/auth\/facebook?firebase=resplendent-fire-4008&v=1.6.2&transport=internal-redirect-hash",
+    "blank",
+    "location=no"
+  ]
+]
+2014-08-20 23:14:07.839 wanderr[10720:70b] CDVPlugin class CDVInAppBrowser (pluginName: InAppBrowser) does not exist.
+2014-08-20 23:14:07.840 wanderr[10720:70b] ERROR: Plugin 'InAppBrowser' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2014-08-20 23:14:07.840 wanderr[10720:70b] -[CDVCommandQueue executePending] [Line 158] FAILED pluginJSON = [
+  "INVALID",
+  "InAppBrowser",
+  "close",
+  [
+
+  ]
+]
