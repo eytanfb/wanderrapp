@@ -1,11 +1,19 @@
 <ion-view title="Sign-In" hide-nav-bar="true">
   <ion-content>
     <article id="login-with-facebook">
-      <h3>Welcome to Wanderr</h3>
-      <button class="button button-clock button-positive" ng-click="login('facebook')">
-        <i class="ion ion-social-facebook"></i>
-        Login with Facebook
-      </button>
+      <div class="sign-in-intro">
+        <i class="fa fa-globe fa-4x"></i><span class="app-title">&nbsp;wanderr</span>
+        <br />
+        <br />
+        <br />Go more places,
+        <br/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Have more fun.
+      </div>
+      <div class="sign-in-buttons">
+        <button class="button button-block button-energized" ng-click="login('facebook')">
+          Log In with Facebook
+        </button>
+      </div>
     </article>
   </ion-content>
 </ion-view>
+

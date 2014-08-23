@@ -3,16 +3,6 @@ To customize the look and feel of Ionic, you can override the variables
 in ionic's _variables.scss file.
 
 For example, you might change some of the default colors:
-
-$light:                           #fff !default;
-$stable:                          #f8f8f8 !default;
-$positive:                        #4a87ee !default;
-$calm:                            #43cee6 !default;
-$balanced:                        #66cc33 !default;
-$energized:                       #f0b840 !default;
-$assertive:                       #ef4e3a !default;
-$royal:                           #8a6de9 !default;
-$dark:                            #444 !default;
 */
 /*!
   Ionicons, v1.4.1
@@ -22,8 +12,8 @@ $dark:                            #444 !default;
 */
 @font-face {
   font-family: "Ionicons";
-  src: url("../lib/ionic/fonts/ionicons.eot?v=1.4.1");
-  src: url("../lib/ionic/fonts/ionicons.eot?v=1.4.1#iefix") format("embedded-opentype"), url("../lib/ionic/fonts/ionicons.ttf?v=1.4.1") format("truetype"), url("../lib/ionic/fonts/ionicons.woff?v=1.4.1") format("woff"), url("../lib/ionic/fonts/ionicons.svg?v=1.4.1#Ionicons") format("svg");
+  src: url("../www/lib/ionic/fonts/ionicons.eot?v=1.4.1");
+  src: url("../www/lib/ionic/fonts/ionicons.eot?v=1.4.1#iefix") format("embedded-opentype"), url("../www/lib/ionic/fonts/ionicons.ttf?v=1.4.1") format("truetype"), url("../www/lib/ionic/fonts/ionicons.woff?v=1.4.1") format("woff"), url("../www/lib/ionic/fonts/ionicons.svg?v=1.4.1#Ionicons") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -7307,5 +7297,27 @@ a.button {
 .platform-ios7.platform-cordova.status-bar-hide {
   margin-bottom: 20px; }
 
+.nav-bar {
+  background-color: #e67e22; }
+
 #login-with-facebook {
-  background-image: url("../img/city.jpg"); }
+  padding-top: 125px;
+  height: 100%;
+  background-image: url("../www/img/city.jpg");
+  background-position: contain;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  text-align: center; }
+
+.app-title {
+  font-size: 70px;
+  font-weight: 200; }
+
+.sign-in-intro {
+  font-weight: 300;
+  font-size: 22px;
+  color: #FFF;
+  height: 70%; }
+
+.sign-in-buttons {
+  height: 30%; }
