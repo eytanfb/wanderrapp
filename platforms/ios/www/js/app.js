@@ -5,22 +5,10 @@ angular.module('wanderr.services', []);
 angular.module('wanderr').run(function($ionicPlatform, $rootScope, $state, $window) {
 
   $ionicPlatform.ready(function() {
-    if(window.StatusBar) {
+    if($window.StatusBar) {
       console.log("statusbar");
       StatusBar.styleDefault();
     }
-  });
-
-  $rootScope.$on('$stateChangeStart', function(event, toState){
-    if (toState.name !== "signin" && toState.name !== "tabs.logout" && !$window.sessionStorage['fbtoken']){
-      $state.go("signin");
-      console.log("getting to signin");
-      event.preventDefault();
-    }
-  });
-
-  $rootScope.$on('OAuthException', function(){
-    $state.go('signin');
   });
 })
 
@@ -43,6 +31,15 @@ angular.module('wanderr').run(function($ionicPlatform, $rootScope, $state, $wind
         'lists-tab' : {
           controller: "ListsCtrl",
           templateUrl: "templates/lists.html"
+        }
+      }
+    })
+    .state('tabs.myself', {
+      url: "/myself",
+      views: {
+        'myself-tab' : {
+          controller: "MyselfCtrl",
+          templateUrl: "templates/myself.html"
         }
       }
     });

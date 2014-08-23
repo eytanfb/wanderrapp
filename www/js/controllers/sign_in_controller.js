@@ -1,7 +1,7 @@
-angular.module('wanderr.controllers').controller("SignInCtrl", function($scope, $rootScope, $firebase, $firebaseSimpleLogin, $state) {
+angular.module('wanderr.controllers').controller("SignInCtrl", function($scope, $rootScope, $firebase, $firebaseSimpleLogin, $state, UserService) {
   // Get a reference to the Firebase
   var firebaseRef = new Firebase("https://resplendent-fire-4008.firebaseio.com/");
-
+  var i = 1;
   // Create a Firebase Simple Login object
   $scope.auth = $firebaseSimpleLogin(firebaseRef);
 
@@ -20,17 +20,19 @@ angular.module('wanderr.controllers').controller("SignInCtrl", function($scope, 
 
   // Upon successful login, set the user object
   $rootScope.$on("$firebaseSimpleLogin:login", function(event, user) {
-    $scope.user = user;
-    $state.go("tabs.lists");
+    UserService.setUser(user);
+    $state.go("tabs.myself");
+    console.log(i);
+    i++;
   });
 
   // Upon successful logout, reset the user object and clear cookies
   $rootScope.$on("$firebaseSimpleLogin:logout", function(event) {
     $scope.user = null;
 
-    window.cookies.clear(function() {
-      console.log("Cookies cleared!");
-    });
+    //window.cookies.clear(function() {
+    //console.log("Cookies cleared!");
+    //});
   });
 
   // Log any login-related errors to the console
