@@ -17,7 +17,7 @@ $carrot:                          #E67E22 !default;
 
 
 // The path for our ionicons font files, relative to the built CSS in www/css
-$ionicons-font-path: "../www/lib/ionic/fonts" !default;
+$ionicons-font-path: "../lib/ionic/fonts" !default;
 
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
@@ -30,7 +30,7 @@ $ionicons-font-path: "../www/lib/ionic/fonts" !default;
 #login-with-facebook {
   padding-top:125px;
   height:100%;
-  background-image:url("../www/img/city.jpg");
+  background-image:url("/img/city.jpg");
   background-position: contain;
   background-size:100% 100%;
   background-repeat: no-repeat;
@@ -51,4 +51,7 @@ $ionicons-font-path: "../www/lib/ionic/fonts" !default;
 
 .sign-in-buttons{
   height:30%;
+}
+.angular-google-map-container { 
+  height: 600px;
 }

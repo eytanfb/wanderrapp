@@ -1,6 +1,8 @@
-angular.module('wanderr', ['ionic', 'firebase', 'wanderr.controllers', 'wanderr.services']);
+var wanderrApp = angular.module('wanderr', ['ionic', 'firebase', 'wanderr.controllers', 'wanderr.services', 'google-maps']);
 angular.module('wanderr.controllers', []);
 angular.module('wanderr.services', []);
+
+wanderrApp.constant("firebaseRef", {baseRef: new Firebase("https://resplendent-fire-4008.firebaseio.com/"), users: new Firebase("https://resplendent-fire-4008.firebaseio.com/users")});
 
 angular.module('wanderr').run(function($ionicPlatform, $rootScope, $state, $window) {
 
@@ -40,6 +42,15 @@ angular.module('wanderr').run(function($ionicPlatform, $rootScope, $state, $wind
         'myself-tab' : {
           controller: "MyselfCtrl",
           templateUrl: "templates/myself.html"
+        }
+      }
+    })
+    .state('tabs.search', {
+      url: "/search",
+      views: {
+        'search-tab' : {
+          controller: "SearchCtrl",
+          templateUrl: "templates/search.html"
         }
       }
     });

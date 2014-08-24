@@ -12,8 +12,8 @@ For example, you might change some of the default colors:
 */
 @font-face {
   font-family: "Ionicons";
-  src: url("../www/lib/ionic/fonts/ionicons.eot?v=1.4.1");
-  src: url("../www/lib/ionic/fonts/ionicons.eot?v=1.4.1#iefix") format("embedded-opentype"), url("../www/lib/ionic/fonts/ionicons.ttf?v=1.4.1") format("truetype"), url("../www/lib/ionic/fonts/ionicons.woff?v=1.4.1") format("woff"), url("../www/lib/ionic/fonts/ionicons.svg?v=1.4.1#Ionicons") format("svg");
+  src: url("../lib/ionic/fonts/ionicons.eot?v=1.4.1");
+  src: url("../lib/ionic/fonts/ionicons.eot?v=1.4.1#iefix") format("embedded-opentype"), url("../lib/ionic/fonts/ionicons.ttf?v=1.4.1") format("truetype"), url("../lib/ionic/fonts/ionicons.woff?v=1.4.1") format("woff"), url("../lib/ionic/fonts/ionicons.svg?v=1.4.1#Ionicons") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -7303,7 +7303,7 @@ a.button {
 #login-with-facebook {
   padding-top: 125px;
   height: 100%;
-  background-image: url("../www/img/city.jpg");
+  background-image: url("/img/city.jpg");
   background-position: contain;
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -7321,3 +7321,6 @@ a.button {
 
 .sign-in-buttons {
   height: 30%; }
+
+.angular-google-map-container {
+  height: 600px; }

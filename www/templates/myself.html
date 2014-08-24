@@ -1,9 +1,10 @@
-<ion-view title="{{user.displayName}}">
+<ion-view title="{{displayName}}">
   <ion-content class="has-header">
     <article id="profile" class='list card'>
       <section class='item item-avatar' id="user-info">
         <img ng-src="{{profilePicture}}" />
-        <h2 ng-bind="user.displayName"></h2>
+        <h2 ng-bind="displayName"></h2>
+        <p>Date Joined: <span ng-bind="dateJoined"></span></p>
       </section>
     </article>
   </ion-content>

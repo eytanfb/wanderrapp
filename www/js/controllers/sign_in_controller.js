@@ -1,9 +1,9 @@
-angular.module('wanderr.controllers').controller("SignInCtrl", function($scope, $rootScope, $firebase, $firebaseSimpleLogin, $state, UserService) {
+angular.module('wanderr.controllers').controller("SignInCtrl", function($scope, $rootScope, $firebase, $firebaseSimpleLogin, $state, UserService, firebaseRef) {
   // Get a reference to the Firebase
-  var firebaseRef = new Firebase("https://resplendent-fire-4008.firebaseio.com/");
   var i = 1;
+  
   // Create a Firebase Simple Login object
-  $scope.auth = $firebaseSimpleLogin(firebaseRef);
+  $scope.auth = $firebaseSimpleLogin(firebaseRef.baseRef);
 
   // Initially set no user to be logged in
   $scope.user = null;

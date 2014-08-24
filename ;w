@@ -1,0 +1,28 @@
+angular.module("wanderr.services").factory('UserService', function(firebaseRef) {
+  var service = {};
+
+  service.user = null;
+
+  service.setUser = function(user) {
+    this.user = user;
+    checkIfUserExists(user.id);
+  };
+
+  function checkIfUserExists(userId) {
+    firebaseRef.users.child(userId).once('value', function(snapshot) {
+      var exists = (snapshot.val() !== null);
+      //userExistsCallback(facebookId, exists);
+      console.log(exists);
+      var myUser = users.child(userId);
+      myUser.set({
+        facebookId: userId,
+        name: service.user.displayName
+      });
+      //var queues = myUser.child("queues");
+    });
+  };
+  service.publicList = ["public item1", "public item2"];
+  service.privateList = ["private item1", "private item2"];
+
+  return service;
+});
