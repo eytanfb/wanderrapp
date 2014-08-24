@@ -1,7 +1,4 @@
-angular.module('wanderr.controllers').controller("SignInCtrl", function($scope, $rootScope, $firebase, $firebaseSimpleLogin, $state, UserService, firebaseRef) {
-  // Get a reference to the Firebase
-  var i = 1;
-  
+angular.module('wanderr.controllers').controller("SignInCtrl", function($scope, $rootScope, $firebase, $firebaseSimpleLogin, $state, UserService, firebaseRef, GeoFactory) {
   // Create a Firebase Simple Login object
   $scope.auth = $firebaseSimpleLogin(firebaseRef.baseRef);
 
@@ -21,9 +18,12 @@ angular.module('wanderr.controllers').controller("SignInCtrl", function($scope, 
   // Upon successful login, set the user object
   $rootScope.$on("$firebaseSimpleLogin:login", function(event, user) {
     UserService.setUser(user);
+    GeoFactory.getLocation().then(function(position) {
+      var lat = position.coords.latitude;
+      var lng = position.coords.longitude;
+      UserService.setLocation(lat, lng);
+    });
     $state.go("tabs.myself");
-    console.log(i);
-    i++;
   });
 
   // Upon successful logout, reset the user object and clear cookies

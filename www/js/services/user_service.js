@@ -3,12 +3,18 @@ angular.module("wanderr.services").factory('UserService', ["firebaseRef", "$fire
     var service = {};
 
     service.user = null;
+    service.location = {};
 
     service.setUser = function(user) {
       this.user = {
         facebookData: user,
         appData: checkIfUserExists(user)
       };
+    };
+
+    service.setLocation = function(lat, lng){
+      service.location.lat = lat;
+      service.location.lng = lng;
     };
 
     function userExistsCallback(user, exists) {
@@ -40,7 +46,6 @@ angular.module("wanderr.services").factory('UserService', ["firebaseRef", "$fire
             appData: value
           });
         });
-        //console.log(myUser + " in userservice");
       });
       return myUser;
     };

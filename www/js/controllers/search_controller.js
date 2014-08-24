@@ -1,21 +1,17 @@
-angular.module('wanderr.controllers').controller("SearchCtrl", ["$scope", "GeoFactory",
-  function($scope, GeoFactory) {
+angular.module('wanderr.controllers').controller("SearchCtrl", ["$scope", "GeoFactory", "$rootScope", "UserService",
+  function($scope, GeoFactory, $rootScope, UserService) {
     $scope.map = {
       center: {
-        latitude: 45,
-        longitude: -73
+        latitude: UserService.location.lat,
+        longitude: UserService.location.lng
       },
       zoom: 8
     };
 
-    GeoFactory.getLocation().then(function(position) {
-      var lat = position.coords.latitude;
-      var lng = position.coords.longitude;
-      $scope.map.center.latitude = lat;
-      $scope.map.center.longitude = lng;
-      console.log($scope.map.center);
+    $rootScope.$on("userLocation", function(event, data) {
+      $scope.map.center.latitude = data.lat;
+      $scope.map.center.longitude = data.lng;
     });
-
 
   }
 ]);
